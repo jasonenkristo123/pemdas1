@@ -4,30 +4,29 @@ import java.util.Scanner;
 public class Belanja {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Masukkan tanggal beli: ");
+        
         int tanggalBeli = input.nextInt();
 
-        System.out.print("Masukkan bulan beli: ");
+        
         int bulanBeli = input.nextInt();
 
-        System.out.print("Masukkan tahun beli: ");
+       
         int tahunBeli = input.nextInt();
         
         input.nextLine();
 
-        System.out.print("Belanja barang apa: ");
+        
         String belanjaBarang = input.nextLine();
         
-        System.out.print("Masukkan jumlah barang: ");
+       
         int jumlahBarang = input.nextInt();
 
-        System.out.print("Harga barangnya berapa: ");
+       
         double hargaBarang = input.nextDouble();
 
-        System.out.print("Diskon berapa persen: ");
+        
         float diskon = input.nextFloat();
 
-        System.out.print("Jenis pembayaran apakah tunai: ");
         boolean jenisPembayaran = input.nextBoolean();
         input.close();
 
