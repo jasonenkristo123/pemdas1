@@ -6,27 +6,13 @@ public class Belanja {
         Scanner input = new Scanner(System.in);
         
         int tanggalBeli = input.nextInt();
-
-        
         int bulanBeli = input.nextInt();
-
-       
         int tahunBeli = input.nextInt();
-        
         input.nextLine();
-
-        
         String belanjaBarang = input.nextLine();
-        
-       
         int jumlahBarang = input.nextInt();
-
-       
         double hargaBarang = input.nextDouble();
-
-        
         float diskon = input.nextFloat();
-
         boolean jenisPembayaran = input.nextBoolean();
         input.close();
 
