@@ -41,3 +41,24 @@ public class Laprak1 {
         System.out.println("===============================");
     }
 }
+
+
+class operator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("masukkan operator pertama: ");
+        int operator1 = input.nextInt();
+        System.out.println("masukkan operator kedua: ");
+        int operator2 = input.nextInt();
+
+        int penjumlahan = (operator1 + operator2);
+        int pengurangan = (operator1 - operator2);
+        int perkalian = (operator1 * operator2);
+        float pembagian = (operator1 / operator2);
+
+        System.out.println("hasil perjumlahan: " + penjumlahan);
+        System.out.println("hasil pengurangan: " + pengurangan);
+        System.out.println("hasil perkalian: " + perkalian);
+        System.out.println("hasil pembagian: " + pembagian);
+    }
+}
