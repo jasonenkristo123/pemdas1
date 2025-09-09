@@ -1,4 +1,4 @@
-package Latihan.Nugas;
+package Latihan.Tugas;
 
 import java.util.Scanner;
 
