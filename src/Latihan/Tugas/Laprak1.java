@@ -8,18 +8,36 @@ public class Laprak1 {
 
         System.out.print("masukkan nama: ");
         String nama = input.nextLine();
+
         System.out.print("Kelurahan: ");
         String kelurahan = input.nextLine();
+
         System.out.print("Masukkan posisi awal Kwh Meter: ");
         int kwhAwal = input.nextInt();
+
         System.out.print("Masukkan posisi akhir Kwh Meter: ");
         int kwhAkhir = input.nextInt();
+
         System.out.print("Masukkan biaya beban saat ini: ");
         int beban = input.nextInt();
+
         System.out.print("Masukkan PPJ (dalam persen): ");
         float PPJ = input.nextFloat();
+
         input.close();
 
-        
+        int pemakaian = (kwhAkhir - kwhAwal);
+        int tarif = (pemakaian * beban);
+        float persen = (tarif * PPJ / 100);
+        float total = (tarif + persen);
+
+        System.out.println("=========== PLN Java ==========");
+        System.out.printf("%-20s: %s\n", "nama", nama);
+        System.out.printf("%-20s: %s\n", "kelurahan", kelurahan);
+        System.out.printf("%-20s: %d\n", "Pemakaian bulan ini", pemakaian);
+        System.out.printf("%-20s: Rp %d,-%n", "Tarif Listrik", tarif);
+        System.out.printf("%-20s: Rp %.0f,-%n", "PPJ " + (int)PPJ + "%", persen);
+        System.out.printf("%-20s: Rp %.0f,-%n", "Pemakaian bulan ini", total);
+        System.out.println("===============================");
     }
 }
