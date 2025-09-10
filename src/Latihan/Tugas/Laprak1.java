@@ -50,11 +50,12 @@ class operator {
         int operator1 = input.nextInt();
         System.out.println("masukkan operator kedua: ");
         int operator2 = input.nextInt();
-
+        input.close();
         int penjumlahan = (operator1 + operator2);
         int pengurangan = (operator1 - operator2);
         int perkalian = (operator1 * operator2);
         float pembagian = (operator1 / operator2);
+        
 
         System.out.println("hasil perjumlahan: " + penjumlahan);
         System.out.println("hasil pengurangan: " + pengurangan);
