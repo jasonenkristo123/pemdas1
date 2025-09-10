@@ -56,3 +56,30 @@ public class Laprak2 {
         input.close(); // input harus di bawahnya print atau di block sendiri kalau tidak menimbulkan eror
     }
 }
+
+
+class indeks {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Berat badan (kg)    : ");
+
+        int berat = input.nextInt();
+        System.out.println("Tingga badan (m)    : ");
+
+        double tinggi = input.nextDouble();
+        input.close();
+
+        double imt = (berat / tinggi * tinggi);
+        String kriteria;
+        if (imt <= 18.5) {
+            kriteria = "termasuk kurus";
+        } else if (imt <= 25) {
+            kriteria = "termasuk normal";
+        } else if (imt <= 30) {
+            kriteria = "termasuk gemuk";
+        } else {
+            kriteria = "termasuk kegemukan";
+        }
+        System.out.printf("IMT = %.2f %s\n", imt, kriteria);
+    }
+}

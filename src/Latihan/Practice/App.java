@@ -2,6 +2,7 @@ package Latihan.Practice;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        double matamu = 1.45;
+        System.out.println(matamu);
     }
 }
