@@ -107,3 +107,21 @@ class kalkulator {
         input.close();
     }
 }
+
+// latihan jumlah hari dalam bulan pakai switch expression
+class jumlahHari {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("masukkan bulan 1-12 : ");
+        int bulan = input.nextInt();
+
+        String hariTotal = switch (bulan) {
+            case 1, 3, 5, 7, 8, 10, 12 -> "31 hari";
+            case 4, 6, 9, 11 -> "30 hari";
+            case 2 -> "28 hari";
+            default -> "bulan ngaco";
+        };
+        System.out.println("total hari di bulan itu adalah: " + hariTotal);
+        input.close();
+    }
+}
