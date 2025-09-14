@@ -53,7 +53,7 @@ public class Laprak2 {
             }
             default -> System.out.println("Data tidak ditemukan, program dihentikan ...");
         }
-        input.close(); // input harus di bawahnya print atau di block sendiri kalau tidak menimbulkan eror
+        input.close(); 
     }
 }
 
@@ -69,7 +69,7 @@ class indeks {
         double tinggi = input.nextDouble();
         input.close();
 
-        double imt = (berat / tinggi * tinggi);
+        double imt = berat / (tinggi * tinggi);
         String kriteria;
         if (imt <= 18.5) {
             kriteria = "termasuk kurus";
