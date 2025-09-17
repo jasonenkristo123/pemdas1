@@ -53,7 +53,7 @@ public class Laprak2 {
             }
             default -> System.out.println("Data tidak ditemukan, program dihentikan ...");
         }
-        input.close(); // input harus di bawahnya print atau di block sendiri kalau tidak menimbulkan eror
+        input.close(); 
     }
 }
 
@@ -69,7 +69,7 @@ class indeks {
         double tinggi = input.nextDouble();
         input.close();
 
-        double imt = (berat / tinggi * tinggi);
+        double imt = berat / (tinggi * tinggi);
         String kriteria;
         if (imt <= 18.5) {
             kriteria = "termasuk kurus";
@@ -81,5 +81,44 @@ class indeks {
             kriteria = "termasuk kegemukan";
         }
         System.out.printf("IMT = %.2f %s\n", imt, kriteria);
+    }
+}
+
+
+class UpahKerja {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Jam kerja     : ");
+        int jamKerja = Integer.parseInt(input.nextLine());
+
+        int upah = 5000;
+        int lembur = 6000;
+        int denda = 1000;
+
+        int totalUpah = 0;
+        int totalLembur = 0;
+        int totalDenda = 0;
+        int totalGaji= 0;
+    
+        
+        if (jamKerja > 60) {
+            int lemburKerja = (jamKerja - 60);
+            totalUpah = 60 * upah;
+            totalLembur = lemburKerja * lembur;
+
+        } else if (jamKerja < 50) {
+            int kurangKerja = 50 - jamKerja;
+            totalDenda = kurangKerja * denda;
+            totalUpah = jamKerja * upah;
+
+        } else {
+           totalUpah = jamKerja * upah;
+        }
+        totalGaji = totalUpah + totalLembur - totalDenda;
+        System.out.println("Upah   = Rp. " + totalUpah);
+        System.out.println("Lembur = Rp. " + totalLembur);
+        System.out.println("Denda  = Rp. " + totalDenda);
+        System.out.println("------------------------");
+        System.out.println("Total  = Rp. " + totalGaji);
     }
 }
