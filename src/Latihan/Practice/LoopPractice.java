@@ -3,8 +3,16 @@ package Latihan.Practice;
 import java.util.Scanner;
 public class LoopPractice {
     public static void main(String[] args) {
-        for (int i = 1; i <= 5; i++) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j < i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -56,3 +64,15 @@ class Loop4 {
         }
     }
 }
+
+class Array {
+    public static void main(String[] args) {
+        int[][] myNumber = {{1, 20, 49, 50}, {20, 30, 40, 50}};
+        for (int row = 0; row < myNumber.length; row++) {
+            for (int col = 0; col < myNumber[row].length; col++) {
+                System.out.println(myNumber[row][col]);
+            }
+        }
+    }
+}
+
