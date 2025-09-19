@@ -76,3 +76,24 @@ class Array {
     }
 }
 
+class security {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Silahkan login user1234");
+        
+        
+        int password = 621312;
+
+        
+        while (true) {
+            System.out.print("Masukkan password: ");
+            int login = input.nextInt();
+           
+
+            if (login == password) {
+            System.out.println("login berhasil");
+            break;
+           }
+        }
+    }
+}
