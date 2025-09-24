@@ -12,7 +12,7 @@ public class LoopPractice {
             System.out.println();
         }
         for (int i = n - 1; i >= 1; i--) {
-            for (int j = 1; j < i; j++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -76,3 +76,61 @@ class Array {
     }
 }
 
+class pyramid {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n -1; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i -1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+class loop {
+    public static void main(String[] args) {
+        int x;
+        for(int i = 1; i<= 10; i++) {
+            if (i >= 5) 
+                continue;
+            System.out.println(i);
+        }
+    }
+}
+
+class infiniteloop {
+    public static void main(String[] args) {
+        int x = 10;
+        while (true) {
+            System.out.println(x); 
+            if (x < 12) {
+                break;
+            }
+        }
+    }
+}
+
+class password {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Silahkan login user1234");
+        
+        int login;
+        int password = 621321;
+        
+        while(true) {
+            System.out.print("Masukkan password: ");
+            login = input.nextInt();
+
+            if (login == password) {
+                System.out.println("login sukses");
+                break;
+            }
+        }
+        
+    }
+}
