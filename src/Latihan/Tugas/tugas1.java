@@ -10,11 +10,11 @@ public class tugas1 {
         System.out.print("Masukkan jumlah siswa per kelas: ");
         int jumlahSiswa = input.nextInt();
 
-        System.out.println(" Daftar Nilai Siswa: ");
+        System.out.println(" Daftar Nilai Siswa: "); // print kelas
         for (int i = 1; i <= jumlahKelas; i++) {
             System.out.println("Kelas" + i + ":");
 
-            for (int j = 1; j <= jumlahSiswa; j++) {
+            for (int j = 1; j <= jumlahSiswa; j++) { // print jumlah siswa
                 System.out.print("Masukkan nilai siswa ke-" + j + ":");
                 int nilaiSiswa = input.nextInt();
                 System.out.println("Nilai siswa ke-" + j + " adalah " + nilaiSiswa);
