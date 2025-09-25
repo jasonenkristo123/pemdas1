@@ -26,10 +26,10 @@ public class CaseBased1 {
             // menampilkan menu terlebih dahulu
             System.out.println("    DAFTAR MENU:");
             System.out.println("1. Nasi Goreng Spesial - Rp 15.000");
-            System.out.println("2. Ayam Bakar Madu - Rp 25.000");
-            System.out.println("3. Soto Ayam Lamongan - Rp 12.000");
-            System.out.println("4. Es Teh Manis - Rp 5.000");
-            System.out.println("5. Es Jeruk - Rp 7.000");
+            System.out.println("2. Ayam Bakar Madu     - Rp 25.000");
+            System.out.println("3. Soto Ayam Lamongan  - Rp 12.000");
+            System.out.println("4. Es Teh Manis        - Rp 5.000");
+            System.out.println("5. Es Jeruk            - Rp 7.000");
 
             // input pesanan untuk pelanggan
             boolean lanjutPesan = true;
@@ -134,35 +134,35 @@ public class CaseBased1 {
                 System.out.println("Nasi Goreng Spesial " + jumlahNasiGoreng + " x 15000 = " + (jumlahNasiGoreng * 15000));
                 }
                 if (jumlahAyamBakar > 0) {
-                System.out.println("Ayam Bakar Madu " + jumlahAyamBakar + " x 25000 = " + (jumlahAyamBakar * 25000));
+                System.out.println("Ayam Bakar Madu " + jumlahAyamBakar + " x 25000     = " + (jumlahAyamBakar * 25000));
                 }
                 if (jumlahSoto > 0) {
-                System.out.println("Soto Ayam Lamongan " + jumlahSoto + " x 12000 = " + (jumlahSoto * 12000));
+                System.out.println("Soto Ayam Lamongan " + jumlahSoto + " x 12000  = " + (jumlahSoto * 12000));
                 }
                 if (jumlahEsTeh > 0) {
-                System.out.println("Es Teh Manis " + jumlahEsTeh + " x 5000 = " + (jumlahEsTeh * 5000));
+                System.out.println("Es Teh Manis " + jumlahEsTeh + " x 5000         = " + (jumlahEsTeh * 5000));
                 }
                 if (jumlahEsJeruk > 0) {
-                System.out.println("Es Jeruk " + jumlahEsJeruk + " x 7000 = " + (jumlahEsJeruk * 7000));
+                System.out.println("Es Jeruk " + jumlahEsJeruk + " x 7000             = " + (jumlahEsJeruk * 7000));
                 }
             
                 System.out.println("------------------------------------");
-                System.out.println("Total Awal: " + totalAwal);
+                System.out.println("Total Awal          : Rp " + totalAwal);
 
                 if (diskonBelanja > 0) {
-                    System.out.println("Diskon belanja: Rp " + diskonBelanja);
+                    System.out.println("Diskon belanja      : Rp " + diskonBelanja);
                 }
                  if (diskonJumat > 0) {
-                System.out.println("Diskon Jumat: -Rp " + diskonJumat);
+                System.out.println("Diskon Jumat        : -Rp " + diskonJumat);
                 }
                 if (biayaBungkus > 0) {
-                System.out.println("Biaya Bungkus: +Rp " + biayaBungkus);
+                System.out.println("Biaya Bungkus       : +Rp " + biayaBungkus);
                 }
 
                 System.out.println("Setelah Diskon/Biaya: Rp " + totalBelanja);
-                System.out.println("Pajak 10%: Rp " + pajak);
+                System.out.println("Pajak 10%           : Rp " + pajak);
                 System.out.println("========================================");
-                System.out.println("TOTAL BAYAR: Rp " + totalAkhir);
+                System.out.println("TOTAL BAYAR         : Rp " + totalAkhir);
                 System.out.println("========================================");
 
                 if (tipeLayanan.equalsIgnoreCase("Bungkus")) {
