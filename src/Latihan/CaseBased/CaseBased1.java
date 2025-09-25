@@ -175,7 +175,7 @@ public class CaseBased1 {
                 System.out.println("Apakah ada pelanggan lagi? (Ya/Tidak): ");
                 String pelanggan = input.next();
                 if (pelanggan.equalsIgnoreCase("Tidak")) {
-                    break;
+                    tutupWarung = true;
                 }
                 System.out.println("Warung Telah Di Tutup. Selamat Datang Kembali Besok");
             }
