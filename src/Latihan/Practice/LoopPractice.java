@@ -76,7 +76,7 @@ class Array {
     }
 }
 
-<<<<<<< HEAD
+
 class pyramid {
     public static void main(String[] args) {
         int n = 5;
@@ -116,14 +116,14 @@ class infiniteloop {
 }
 
 class password {
-=======
+
 class security {
->>>>>>> 440374b12ea42e302e5f65a9529072b9a5de43ce
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Silahkan login user1234");
         
-<<<<<<< HEAD
+
         int login;
         int password = 621321;
         
@@ -139,7 +139,6 @@ class security {
         
     }
 }
-=======
         
         int password = 621312;
 
@@ -147,8 +146,7 @@ class security {
         while (true) {
             System.out.print("Masukkan password: ");
             int login = input.nextInt();
-           
-
+        
             if (login == password) {
             System.out.println("login berhasil");
             break;
@@ -156,4 +154,4 @@ class security {
         }
     }
 }
->>>>>>> 440374b12ea42e302e5f65a9529072b9a5de43ce
+
