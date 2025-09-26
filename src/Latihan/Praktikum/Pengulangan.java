@@ -17,11 +17,19 @@ class pengulangan1 {
     }
 }
 
-class method {
-    static int sum(int x, int y) {
-            return x * y;
-    }
+class array {
     public static void main(String[] args) {
-        System.out.println(sum(4, 2));
+        int[] jasik = {5, 10, 25, 100};
+        float sum = 0;
+        float avg = 0;
+        int length = jasik.length;
+
+        for (int jaran : jasik) {
+            sum += jaran;
+            
+        }
+            avg = sum / length;
+
+            System.out.println(avg);
     }
 }
