@@ -1,5 +1,6 @@
 package Latihan.Practice;
 
+import javax.swing.*;
 public class ArrayPemdas {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4, 5, 6, 7};
@@ -14,5 +15,12 @@ public class ArrayPemdas {
             System.out.println(num);
         }
         System.out.println("rata rata nilai b: " + total);
+    }
+}
+
+class array1 {
+    public static void main(String[] args) {
+        int frequency[] = new int[] {7};
+        
     }
 }
