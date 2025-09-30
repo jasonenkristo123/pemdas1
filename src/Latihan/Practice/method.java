@@ -25,3 +25,26 @@ class predikat {
         }
     }
 }
+class nyoba {
+    static void makan(String maem) {
+        System.out.println("i love to eat" + maem);
+    }
+    public static void main(String[] args) {
+        makan("sate");
+    }
+}
+
+class kelipatan {
+    private static boolean kelipatandua(int n) {
+        if (n <= 0) return false;
+            while (n > 1) {
+                if (n % 2 == 1) 
+                    return false;
+                n /= 2;
+                } 
+                 return true;
+    }
+    public static void main(String[] args) {
+        System.out.println(kelipatandua(4));
+    }
+}   
