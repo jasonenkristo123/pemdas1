@@ -48,3 +48,5 @@ class kelipatan {
         System.out.println(kelipatandua(4));
     }
 }   
+
+
