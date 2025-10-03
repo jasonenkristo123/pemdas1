@@ -1,4 +1,4 @@
-'package Latihan.Tugas;
+package Latihan.Tugas;
 
 import java.util.Scanner;
 

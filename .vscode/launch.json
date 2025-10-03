@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "DekripsiKode",
+      "request": "launch",
+      "mainClass": "Latihan.Zatian.DekripsiKode",
+      "projectName": "pemdas1_32d330ee"
+    },
+    {
+      "type": "java",
+      "name": "BelajarStringBuilder",
+      "request": "launch",
+      "mainClass": "Latihan.Zatian.BelajarStringBuilder",
+      "projectName": "pemdas1_32d330ee"
+    },
+    {
+      "type": "java",
+      "name": "PakBudi",
+      "request": "launch",
+      "mainClass": "Latihan.Practice.PakBudi",
+      "projectName": "pemdas1_32d330ee"
+    },
+    {
+      "type": "java",
+      "name": "Run PakBudi",
+      "request": "launch",
+      "mainClass": "Latihan.Practice.PakBudi",
+      "projectName": "pemdas1"
+    }
+  ]
+}
