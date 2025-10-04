@@ -32,12 +32,17 @@ public class Laprak4 {
                 break;
 
                 case 2:
+                if (jumlahdata == 0) {
+                    System.out.println("Belum ada data");
+                } else {
                     for (int i = 0; i < jumlahdata; i++) {
                         System.out.println("Data saat ini: " + data[i]);
+                    }
                 }
                 break;
 
                 case 3:
+                sum = 0;
                     for (int i = 0; i < jumlahdata; i++) {
                         sum += data[i];
                 }
@@ -46,6 +51,7 @@ public class Laprak4 {
                 break;
 
                 case 4: 
+                sum = 0;
                     for (int i = 0; i < jumlahdata; i++) {
                         sum += data[i];
                 }
@@ -53,23 +59,23 @@ public class Laprak4 {
                 break;
                 
                 case 5: 
+                int nilaimax = data[0];
                     for (int i = 0; i < jumlahdata; i++) {
-                        int nilaimax = data[0];
                         if (data[i] > nilaimax) {
                             nilaimax = data[i];        
                     }
-                    System.out.println("Nilai max: " + nilaimax);
                 }
+                System.out.println("Nilai max: " + nilaimax);
                 break;
                 
                 case 6: 
+                int nilaimin = data[0];
                     for (int i = 0; i < jumlahdata; i++) {
-                        int nilaimin = data[0];
                         if (data[i] < nilaimin) {
                             nilaimin = data[i];
                     }
-                    System.out.println("Nilai max: " + nilaimin);
                 }
+                System.out.println("Nilai min: " + nilaimin);
                 break;
                 case 0: 
                     kodevalid = false;
