@@ -123,20 +123,20 @@ class keretaApi {
                 case 1: 
                     for (int i = 0; i < jenis.length; i++) {
                         System.out.println("Daftar kereta api saat ini: ");
-                        System.out.printf("%-15s, %-15d, %-15s, %-15s, %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                        System.out.printf("%-15s %-15d %-15s %-15s %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
                 }
                 break;
                 case 2:
                     for (int i = 0; i < jenis.length; i++) {
                         if (ac[i].equals("Ada")) {
-                            System.out.printf("%-15s, %-15d, %-15s, %-15s, %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                            System.out.printf("%-15s %-15d %-15s %-15s %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
                     }
                 }
                 break;
                 case 3:
                     for (int i = 0; i < jenis.length; i++) {
                         if (ac[i].equals("Ada") && colokan[i].equals("Ada")) {
-                            System.out.printf("%-15s, %-15d, %-15s, %-15s, %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                            System.out.printf("%-15s %-15d %-15s %-15s %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
                     }
                 }
                 break;
@@ -148,7 +148,7 @@ class keretaApi {
                         System.out.println("nomor kereta tidak valid");
                     break;
                 }
-                System.out.print("Jumlah tiket?: ")
+                System.out.print("Jumlah tiket?: ");
                 int jumlahTiket = in.nextInt();
 
                 if (jumlahTiket < 0) {
@@ -183,13 +183,14 @@ class keretaApi {
 
                         double totalSemuaPesanan = 0;
 
-                        for (int i < 0; i < jumlah; i++) {
+                        for (int i = 0; i < jumlah; i++) {
                             System.out.printf("%-10d %-10s %-10d %-10d\n", (i+1), jenisPesanan[i], jumlahPesanan[i], (int) totalPesanan[i]);
 
-                        totalSemuaPesanan += totalPesanan;
+                        totalSemuaPesanan += totalPesanan[i];
                         }
                         System.out.println("Total dari semua pesanan: " + (int)totalSemuaPesanan);
-                        break;
+                }
+                break;
                 case 0:
                     System.out.println("Program selesai terimakasih!");
                     kodeValid = false;
@@ -197,7 +198,6 @@ class keretaApi {
                 
                 default: 
                     System.out.println("Invalid kode pilih");
-                }
             }
         }
     }
