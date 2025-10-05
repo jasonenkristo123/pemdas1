@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Laprak4",
+      "request": "launch",
+      "mainClass": "Latihan.Praktikum.Laprak4",
+      "projectName": "pemdas1_92e8c68"
+    },
+    {
+      "type": "java",
       "name": "DekripsiKode",
       "request": "launch",
       "mainClass": "Latihan.Zatian.DekripsiKode",
