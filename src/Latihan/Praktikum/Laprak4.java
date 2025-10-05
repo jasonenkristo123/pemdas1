@@ -88,3 +88,117 @@ public class Laprak4 {
         }
     }
 }
+
+class keretaApi {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        String[] jenis = {"Ekonomi", "Bisnis", "Eksekutif", "Pariwisata"};
+        int[] harga = {50000, 100000, 200000, 300000};
+        int[] diskon = {2, 5, 7, 10};
+        String[] ac = {"Tidak ada", "Ada", "Ada", "Ada"};
+        String[] colokan = {"Tidak ada", "Tidak ada", "Tidak ada", "Ada"};
+
+        String[] jenisPesanan = new String[100];
+        int[] jumlahPesanan = new int[100];
+        double[] totalPesanan = new double[100];
+        int jumlah = 0;
+
+        boolean kodeValid = true;
+        
+        while (kodeValid) {
+            System.out.println("========================================");
+            System.out.println("      PEMESANAN TIKET KERETA API");
+            System.out.println("========================================");
+            System.out.println("1. Lihat daftar kereta api");
+            System.out.println("2. Lihat kereta api dengan ac");
+            System.out.println("3. Lihat kereta api dengan ac dan colokan");
+            System.out.println("4. Pesan tiket kereta api");
+            System.out.println("5. Lihat pesanan tiket kereta api");
+            System.out.println("0. Keluar");
+            System.out.print("Masukkan pilihan: ");
+            int pilihan = in.nextInt();
+
+            switch (pilihan) {
+                case 1: 
+                    for (int i = 0; i < jenis.length; i++) {
+                        System.out.println("Daftar kereta api saat ini: ");
+                        System.out.printf("%-15s, %-15d, %-15s, %-15s, %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                }
+                break;
+                case 2:
+                    for (int i = 0; i < jenis.length; i++) {
+                        if (ac[i].equals("Ada")) {
+                            System.out.printf("%-15s, %-15d, %-15s, %-15s, %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                    }
+                }
+                break;
+                case 3:
+                    for (int i = 0; i < jenis.length; i++) {
+                        if (ac[i].equals("Ada") && colokan[i].equals("Ada")) {
+                            System.out.printf("%-15s, %-15d, %-15s, %-15s, %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                    }
+                }
+                break;
+                case 4:
+                    System.out.print("Pilih jenis kereta api(1-4): ");
+                    int milih = in.nextInt();  
+
+                    if (milih < 1 || milih > jenis.length) {
+                        System.out.println("nomor kereta tidak valid");
+                    break;
+                }
+                System.out.print("Jumlah tiket?: ")
+                int jumlahTiket = in.nextInt();
+
+                if (jumlahTiket < 0) {
+                    System.out.println("Masa ga beli sih yang bener aje");
+                }
+
+                int index = milih - 1;
+
+                double totalSebelumDiskon = harga[index] * jumlahTiket;
+                double potongan = totalSebelumDiskon * diskon[index] / 100;
+                double totalAkhir = totalSebelumDiskon - potongan;
+
+                jenisPesanan[jumlah] = jenis[index];
+                jumlahPesanan[jumlah] = jumlahTiket;
+                totalPesanan[jumlah] = totalAkhir;
+                jumlah++;
+
+                System.out.println("    DETAIL PESANAN     ");
+                System.out.println("Jenis kereta: " + jenis[index]);
+                System.out.println("Jumlah tiket: " + jumlahTiket);
+                System.out.println("Harga per tiket: " + "Rp " + harga[index]);
+                System.out.println("Subtotal       : " + "Rp " + (int) totalSebelumDiskon);
+                System.out.println("Diskon         : " + diskon[index] + "%");
+                System.out.println("Total Bayar    : " + "Rp " + (int) totalAkhir);
+                break;
+
+                case 5: 
+                    if (jumlah == 0) {
+                        System.out.println("Belum ada pesanan ya bos");
+                    } else {
+                        System.out.printf("%-10s %-10s %-10s %-10s\n", "No", "Jenis Kereta", "Jumlah", "Total Harga");
+
+                        double totalSemuaPesanan = 0;
+
+                        for (int i < 0; i < jumlah; i++) {
+                            System.out.printf("%-10d %-10s %-10d %-10d\n", (i+1), jenisPesanan[i], jumlahPesanan[i], (int) totalPesanan[i]);
+
+                        totalSemuaPesanan += totalPesanan;
+                        }
+                        System.out.println("Total dari semua pesanan: " + (int)totalSemuaPesanan);
+                        break;
+                case 0:
+                    System.out.println("Program selesai terimakasih!");
+                    kodeValid = false;
+                    break;
+                
+                default: 
+                    System.out.println("Invalid kode pilih");
+                }
+            }
+        }
+    }
+}
