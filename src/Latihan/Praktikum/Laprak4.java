@@ -121,25 +121,24 @@ class keretaApi {
 
             switch (pilihan) {
                 case 1: 
-                System.out.println("Daftar kereta api saat ini: ");
-                System.out.printf("%-15s %-12s %-10s %-10s %10s", "Jenis", "Harga", "Diskon(%)", "AC", "Colokan");
+                    System.out.println("Daftar kereta api saat ini: ");
+                    System.out.printf("%-15s %-12d %-10s %-12s %10s", jenis, harga, diskon, ac, colokan);
                     for (int i = 0; i < jenis.length; i++) {
-                        System.out.printf("\n%-15s %-12d %-10s %-12s %-12s\n", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                        
+                        System.out.printf("%-15s %-12d %-10s %-12s %-12s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
                 }
                 break;
                 case 2:
-                System.out.printf("%-15s %-12s %-10s %-10s %10s", "Jenis", "Harga", "Diskon(%)", "AC", "Colokan");
                     for (int i = 0; i < jenis.length; i++) {
                         if (ac[i].equals("Ada")) {
-                            System.out.printf("\n%-15s %-12d %-10s %-12s %-12s\n", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                            System.out.printf("%-15s %-15d %-15s %-15s %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
                     }
                 }
                 break;
                 case 3:
-                System.out.printf("%-15s %-12s %-10s %-10s %10s", "Jenis", "Harga", "Diskon(%)", "AC", "Colokan");
                     for (int i = 0; i < jenis.length; i++) {
                         if (ac[i].equals("Ada") && colokan[i].equals("Ada")) {
-                            System.out.printf("\n%-15s %-12d %-10s %-12s %-12s\n", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
+                            System.out.printf("%-15s %-15d %-15s %-15s %-15s", jenis[i], harga[i], diskon[i], ac[i], colokan[i]);
                     }
                 }
                 break;

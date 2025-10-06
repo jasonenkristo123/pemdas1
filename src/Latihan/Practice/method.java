@@ -50,3 +50,12 @@ class kelipatan {
 }   
 
 
+class perkalian {
+    public static void kali(int x, int y) {
+        System.out.println(x * y);
+    }
+
+    public static void main(String[] args) {
+        kali(10, 20);
+    }
+}
