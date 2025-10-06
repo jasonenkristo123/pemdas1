@@ -32,7 +32,7 @@ public class PakBudi {
 
     static boolean prosesPembelian(String[] namaBuah, int[] stokBuah, int[] hargaBuah, int pilih, int jumlah) {
         if (stokBuah[pilih] >= jumlah) {
-            double total = hargaBuah[pilih] * jumlah;
+            int total = hargaBuah[pilih] * jumlah;
             stokBuah[pilih] = stokBuah[pilih] - jumlah;
 
             System.out.println("=== Struk Belanja Kamu ===");
@@ -49,7 +49,7 @@ public class PakBudi {
     static void tampilkanStokKritis (String[] namaBuah, int[] stokBuah) {
         System.out.println("== Daftar Buah Yang Stoknya Kritis");
         for (int i = 0; i < namaBuah.length; i++) {
-        if (stokBuah[i] < 20) {
+        if (stokBuah[i] <= 20) {
             System.out.println(namaBuah[i] + ", Stok sisa: " + stokBuah[i]);
         }
     }
