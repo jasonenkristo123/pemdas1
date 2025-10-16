@@ -181,3 +181,7 @@ class DekripsiKode {
         input.close();
     }
 }
+
+class String {
+    
+}

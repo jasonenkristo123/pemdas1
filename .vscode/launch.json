@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "string2",
+      "request": "launch",
+      "mainClass": "Latihan.Praktikum.string2",
+      "projectName": "pemdas1_92e8c68"
+    },
+    {
+      "type": "java",
+      "name": "string1",
+      "request": "launch",
+      "mainClass": "Latihan.Praktikum.string1",
+      "projectName": "pemdas1_92e8c68"
+    },
+    {
+      "type": "java",
+      "name": "zatian",
+      "request": "launch",
+      "mainClass": "Latihan.Praktikum.zatian",
+      "projectName": "pemdas1_92e8c68"
+    },
+    {
+      "type": "java",
       "name": "DemoManipulasiString",
       "request": "launch",
       "mainClass": "Latihan.Praktikum.DemoManipulasiString",
