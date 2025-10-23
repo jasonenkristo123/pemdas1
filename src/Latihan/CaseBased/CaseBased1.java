@@ -9,9 +9,9 @@ public class CaseBased1 {
 
         System.out.println("===================================");
         System.out.println("   SISTEM KASIR WARUNG NUSANTARA   ");
-        System.out.println("===================================");
+        System.out.println("==================================="); 
 
-        while (tutupWarung == false) {
+        while (tutupWarung) {
             System.out.println("--- TRANSAKSI BARU ---");
 
             tampilkanMenu();
@@ -167,37 +167,38 @@ public class CaseBased1 {
     }
 
     static void cetakStruk(
-        int nasiGoreng, int ayamBakar, int soto,
-        int esTeh, int esJeruk,
-        int totalAwal, int diskonBelanja, int diskonJumat,
-        int biayaBungkus, int pajak, int totalAkhir, String tipeLayanan) {
+    int jumlahNasiGoreng, int jumlahAyamBakar, int jumlahSoto,
+    int jumlahEsTeh, int jumlahEsJeruk,
+    int totalAwal, int diskonBelanja, int diskonJumat,
+    int biayaBungkus, int pajak, int totalAkhir, String tipeLayanan) {
         System.out.println("===================================");
         System.out.println("      WARUNG MAKAN NUSANTARA       ");
         System.out.println("           STRUK BELANJA           ");
         System.out.println("===================================");
 
-        if (nasiGoreng > 0)
-            System.out.println("Nasi Goreng Spesial " + nasiGoreng + " x 15000 = " + (nasiGoreng * 15000));
-        if (ayamBakar > 0)
-            System.out.println("Ayam Bakar Madu " + ayamBakar + " x 25000 = " + (ayamBakar * 25000));
-        if (soto > 0)
-            System.out.println("Soto Ayam Lamongan " + soto + " x 12000 = " + (soto * 12000));
-        if (esTeh > 0)
-            System.out.println("Es Teh Manis " + esTeh + " x 5000 = " + (esTeh * 5000));
-        if (esJeruk > 0)
-            System.out.println("Es Jeruk " + esJeruk + " x 7000 = " + (esJeruk * 7000));
 
-        System.out.println("------------------------------------");
-        System.out.println("Total Awal       : Rp " + totalAwal);
-        if (diskonBelanja > 0) System.out.println("Diskon Belanja   : Rp " + diskonBelanja);
-        if (diskonJumat > 0) System.out.println("Diskon Jumat     : Rp " + diskonJumat);
-        if (biayaBungkus > 0) System.out.println("Biaya Bungkus    : Rp " + biayaBungkus);
-        System.out.println("Pajak (10%)      : Rp " + pajak);
-        System.out.println("===================================");
-        System.out.println("TOTAL BAYAR      : Rp " + totalAkhir);
-        System.out.println("===================================");
-        System.out.println((tipeLayanan.equalsIgnoreCase("Bungkus")) ? "PESANAN DIBUNGKUS" : "MAKAN DI TEMPAT");
-        System.out.println("Terima Kasih Sudah Belanja!");
+    if (jumlahNasiGoreng > 0)
+        System.out.println("Nasi Goreng Spesial " + jumlahNasiGoreng + " x 15000 = " + (jumlahNasiGoreng * 15000));
+    if (jumlahAyamBakar > 0)
+        System.out.println("Ayam Bakar Madu " + jumlahAyamBakar + " x 25000 = " + (jumlahAyamBakar * 25000));
+    if (jumlahSoto > 0)
+        System.out.println("Soto Ayam Lamongan " + jumlahSoto + " x 12000 = " + (jumlahSoto * 12000));
+    if (jumlahEsTeh > 0)
+        System.out.println("Es Teh Manis " + jumlahEsTeh + " x 5000 = " + (jumlahEsTeh * 5000));
+    if (jumlahEsJeruk > 0)
+        System.out.println("Es Jeruk " + jumlahEsJeruk + " x 7000 = " + (jumlahEsJeruk * 7000));
+
+    System.out.println("------------------------------------");
+    System.out.println("Total Awal       : Rp " + totalAwal);
+    if (diskonBelanja > 0) System.out.println("Diskon Belanja   : Rp " + diskonBelanja);
+    if (diskonJumat > 0) System.out.println("Diskon Jumat     : Rp " + diskonJumat);
+    if (biayaBungkus > 0) System.out.println("Biaya Bungkus    : Rp " + biayaBungkus);
+    System.out.println("Pajak (10%)      : Rp " + pajak);
+    System.out.println("===================================");
+    System.out.println("TOTAL BAYAR      : Rp " + totalAkhir);
+    System.out.println("===================================");
+    System.out.println((tipeLayanan.equalsIgnoreCase("Bungkus")) ? "PESANAN DIBUNGKUS" : "MAKAN DI TEMPAT");
+    System.out.println("Terima Kasih Sudah Belanja!");
     }
 }
     
