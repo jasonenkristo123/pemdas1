@@ -181,3 +181,53 @@ class DekripsiKode {
         input.close();
     }
 }
+
+class setres1 {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner in = new Scanner(System.in);
+        int jumlah = in.nextInt();
+        int arr[] = new int[jumlah];
+        
+        for (int i = 0; i < jumlah; i++) {
+            arr[i] = in.nextInt();
+        }
+        int nilai = arr[0];
+        int frekuensi = 0;
+        for (int i = 0; i < jumlah; i++) {
+            int hitung = 0;
+            for (int j = 0; j < jumlah; j++) {
+                if (arr[i] == arr[j]) {
+                hitung++; 
+                }
+            }
+                if (hitung > frekuensi || (hitung == frekuensi && arr[i] < nilai)) {
+                frekuensi = hitung;
+                nilai = arr[i];
+            }
+        }
+        
+        System.out.println("Nilai: " + nilai);
+        System.out.println("Frekuensi: " + frekuensi);
+        System.out.print("Indeks: ");
+        for (int i = 0; i < jumlah; i++) {
+            if (arr[i] == nilai) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+class setres2 {
+    public static void main(String[] args) {
+        String angka = "10";
+        int n = Integer.parseInt(angka);
+        System.out.println(n * 3);
+
+        int j = 20;
+        String ubah = Integer.toString(j);
+        String apalah = "Woi tai";
+        System.out.println(ubah.concat(apalah));
+    }
+}
