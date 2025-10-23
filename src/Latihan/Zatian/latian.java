@@ -182,6 +182,7 @@ class DekripsiKode {
     }
 }
 
+<<<<<<< HEAD
 class setres1 {
 
     public static void main(String[] args) {
@@ -230,4 +231,8 @@ class setres2 {
         String apalah = "Woi tai";
         System.out.println(ubah.concat(apalah));
     }
+=======
+class String {
+    
+>>>>>>> 7a2ca586970b052ed58a678316440f1ab992f892
 }
