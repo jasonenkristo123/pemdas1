@@ -182,7 +182,6 @@ class DekripsiKode {
     }
 }
 
-<<<<<<< HEAD
 class setres1 {
 
     public static void main(String[] args) {
@@ -222,17 +221,14 @@ class setres1 {
 
 class setres2 {
     public static void main(String[] args) {
-        String angka = "10";
-        int n = Integer.parseInt(angka);
-        System.out.println(n * 3);
-
-        int j = 20;
-        String ubah = Integer.toString(j);
-        String apalah = "Woi tai";
-        System.out.println(ubah.concat(apalah));
+        Scanner in = new Scanner(System.in);
+        String huruf = in.nextLine();
+        StringBuilder sb = new StringBuilder(huruf);
+        
+        String potong = huruf.substring(2, 6);
+        sb.replace(3, 4, "X");
+        
+        System.out.println(potong);
+        System.out.println(sb.toString());
     }
-=======
-class String {
-    
->>>>>>> 7a2ca586970b052ed58a678316440f1ab992f892
 }
