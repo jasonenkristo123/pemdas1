@@ -2,13 +2,58 @@ package Latihan.Praktikum;
 import  java.util.*;
 
 public class utp {
+public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        int jumlah = in.nextInt();
+        in.nextLine();
+        String nama[] = new String[jumlah];
+        
+        System.out.println("Masukkan " + jumlah + " nama lengkap");
+        for (int i = 0; i < jumlah; i++) {
+            System.out.print("Nama ke-" + (i + 1) + ": ");
+            nama[i] = in.nextLine();
+        }
+        
+        String inisial = in.nextLine().trim();
+        System.out.println();
+        
+        System.out.println("Inisial dari setiap nama: ");
+        for (int i = 0; i < jumlah; i++) {
+            String bagian[] = nama[i].trim().split("\\s+");
+            System.out.print(nama[i] + " -> ");
 
+            for (String kata : bagian) {
+                System.out.print(Character.toUpperCase(kata.charAt(0)) + ".");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println("Nama yang berawalan huruf " + "'" + inisial.toUpperCase() + "'");
+        boolean ditemukan = false;
+        for (int i = 0; i < jumlah; i++) {
+            if (nama[i].trim().toLowerCase().startsWith(inisial.toLowerCase())) {
+                String[] bagian = nama[i].split("\\s+");
+                String hasilnama = "";
+                for (String kata : bagian) {
+                    hasilnama += kata.substring(0, 1).toUpperCase() + kata.substring(1).toLowerCase() + " ";
+                }
+                System.out.println(hasilnama.trim());
+                ditemukan = true;
+                } 
+            }
+            if (!ditemukan) {
+            System.out.println("Tidak ada nama yang berawalan " + "'" + inisial.toUpperCase() + "'");
+        }
+        
+        int totalhuruf = 0;
+        for (int i = 0; i < jumlah; i++) {
+            totalhuruf += nama[i].replace(" ", "").length();
+        }
+        System.out.println("Total huruf (tanpa spasi): " + totalhuruf);
+    }
 }
-
-
-
-
-
+    
 
 class utp2 {
     public static void main(String[] args) {
