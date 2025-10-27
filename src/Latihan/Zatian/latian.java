@@ -232,3 +232,23 @@ class setres2 {
         System.out.println(sb.toString());
     }
 }
+
+class faktorial {
+    public static void main(String[] args) {
+        int x = rekursif(5);
+        System.out.println(x);
+    }
+    static int rekursif(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * rekursif(n - 1);
+        }
+    }
+}   
+
+class test {
+    public static void main(String[] args) {
+        System.out.println("asem");
+    }
+}

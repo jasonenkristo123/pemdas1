@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "test",
+      "request": "launch",
+      "mainClass": "Latihan.Zatian.test",
+      "projectName": "pemdas1_32d330ee"
+    },
+    {
+      "type": "java",
+      "name": "faktorial",
+      "request": "launch",
+      "mainClass": "Latihan.Zatian.faktorial",
+      "projectName": "pemdas1_32d330ee"
+    },
+    {
+      "type": "java",
       "name": "string2",
       "request": "launch",
       "mainClass": "Latihan.Praktikum.string2",
